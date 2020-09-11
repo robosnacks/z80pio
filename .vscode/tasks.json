@@ -1,0 +1,22 @@
+{
+        "version": "2.0.0",
+        "tasks": [
+                {
+                        "label": "sjasmplus",
+                        "type": "shell",
+                        "command": "sjasmplus",
+                        "args": [
+                                "--lst",
+                                "--lstlab",
+                                "${file}"
+                        ],
+                        "problemMatcher": []
+                },
+                {
+                        "label": "start linc80 receive",
+                        "type": "shell",
+                        "command": "receive",
+                        "problemMatcher": []
+                }
+        ]
+    }

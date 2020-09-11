@@ -1,0 +1,5 @@
+set modem type none
+set line /dev/ttyUSB1
+set carrier-watch off
+set speed 9600
+set flow rts/cts
