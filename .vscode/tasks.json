@@ -18,5 +18,19 @@
                         "command": "receive",
                         "problemMatcher": []
                 }
+                {
+                        "label": "make hex file",
+                        "type": "shell",
+                        "command": "appmake",
+                        "args": [
+                                "+hex",
+                                "--org",
+                                "0x8000",
+                                "-b",
+                                "${file}",
+                                "-o",
+                                "${fileBasenameNoExtension}.hex"
+                        ]
+                }
         ]
     }
