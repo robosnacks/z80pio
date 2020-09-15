@@ -17,7 +17,7 @@
                         "type": "shell",
                         "command": "receive",
                         "problemMatcher": []
-                }
+                },
                 {
                         "label": "make hex file",
                         "type": "shell",
