@@ -14,21 +14,21 @@ NEW
 
 10000 rem Init LCD
 10010 Out 7,128 	:rem 8255 all ports Output
-10020 out 4,0
-10040 out 6,0
+10020 out 4,0           :rem port a, db0 - db7 to 0
+10040 out 6,0           :rem E = low, R/W = write, RS = command
 
 10050 for I=1 to 4
-10060 	out 4,56 	:rem 8Bit 
-10070 	out 6,128
+10060 	out 4,56 	:rem 8Bit 38h   00111000b
+10070 	out 6,128       :rem 80h        10000000b
 10080 	out 6,0
 10090 next i
 
 10100 out 4,6 		:rem Increment 
-10110 out 6,128
+10110 out 6,128         :rem 80h        10000000b
 10120 out 6,0
 
 10130 out 4,12 		:rem Cursor on, Display on 
-10140 out 6,128
+10140 out 6,128         :rem 80h        10000000b
 10150 out 6,0
 
 10160 gosub 10200	:rem Clear display
@@ -53,7 +53,7 @@ NEW
 10320 for i=1 to l
 10330 	t=asc(mid$(tx$,i,1))
 10340	out 4,t
-10350	out 6,160
+10350	out 6,160      :rem A0h         10100000b 
 10360 	out 6,0
 10370 next
 10390 return

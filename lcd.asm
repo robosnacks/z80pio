@@ -38,5 +38,5 @@ dispon  ld      a,0ch
 
         ret
         
-phrase  db      "Hello, World"
+phrase  db      "Hello, World", 0
         outend
